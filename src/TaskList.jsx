@@ -1,6 +1,9 @@
+import { useTaskContext } from "../context/TaskContext";
 import TaskItem from "./TaskItem";
 
-function TaskList({ tasks }) {
+function TaskList() {
+  const { tasks } = useTaskContext();
+
   return (
     <ul>
       {tasks.map((t, index) => (
